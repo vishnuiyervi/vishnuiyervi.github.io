@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Morals</title>
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+        <!-- Import Cabin Font -->
+        <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+        <!-- Import Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="new.css" type = "text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="pure-g">
+            <div class="pure-u-1-5"></div>
+            <div class="pure-u-3-5">
+                <h2 class="page-head">Morals</h2>
+                <p class="body">
+                    Here is a collection of morals and tips/tricks our section has come up with. This is intended to be a review of section as well as a homework helper and study resource for exams!
+                </p>
+                <h4 class="sub-head">1/23 Section 1 - Asymptotics</h4>
+                <ul>
+                    <li>When considering asymptotics, the base of an exponent matters. For example, 3<sup>n</sup> grows asymptotically faster than 2<sup>n</sup>.</li>
+                    <li>In a single variable function, only the fastest growing term matters. For example, the function n<sup>2</sup> + n  log n  grows as n<sup>2</sup> because the quadratic term grows faster than the n log n term.</li>
+                    <li>Any exponent with a base greater than 1 grows faster than every polynomial.</li>
+                    <li>A function of n where n is raised to a power greater than 0 always grows faster than logarithmic functions of n.</li>
+                    <li>If f(n) is &Theta(n<sup>k</sup>) then the sum from i=1 to i=n of f(i) is &Theta(n<sup>k+1</sup>).</li>
+                </ul>
+                <br>
+                <h4 class="sub-head">1/30 Section 2 - Divide and Conquer</h4>
+                <ul>
+                    <li>The Master Theorem can be viewed in context of divide and conquer problems. Thus it is great for analyzing their runtimes.</li>
+                    <li>We use roots of unity in the FFT to make taking square roots easier.</li>
+                    <li>We can only run the FFT algorithm on inputs whose size is some power of 2.</li>
+                    <li>Ideas to solve divide and conquer problems come from analyzing solutions to other divide and conquer problems. The more you have to go off of, the more ideas you can come up with.</li>
+                </ul>
+                <br>
+                <h4 class="sub-head">2/6 Section 3 - FFT and Graphs</h4>
+                <ul>
+                    <li>FFT makes polynomial multiplication easy because we can efficiently convert to and from the value representation, where it is much simpler to multiply polynomials.</li>
+                    <li>Polynomial multiplication is very robust because it can model a variety of processes. This is why FFT is such a useful algorithm.</li>
+                    <li>A vertex i is the ancestor of vertex j in a DFS tree if there is a directed path from i to j consisting of tree edges.</li>
+                    <li>A directed graph has a cycle if and only if there is a back edge in any DFS run.</li>
+                    <li>Graph decomposition is a cheap and useful process. It takes time linear in the sum of edges and vertices and makes the graph a lot easier to deal with.</li>
+                    <li>If vertex i is reachable from vertex j in G then j is reachable from i in the reverse graph.</li>
+                </ul>
+                <br>
+                <h4 class="sub-head">2/13 Section 4 - Graphs I</h4>
+                <ul>
+                    <li>Assumptions about algorithms can be useful in proving properties of underlying structures. For example, properties of BFS and DFS can be useful in proving properties of graphs in general.</li>
+                    <li>Dijkstra's algorithm is equivalent to BFS when all edge weights are equal.</li>
+                </ul>
+                <h4 class="sub-head">2/20 Section 5 - Graphs II</h4>
+                <ul>
+                    <li>In order to prove counterexamples, it is important to understand the functionality of the algorithm. This will help you treat edge cases properly.</li>
+                    <li>Bellman-Ford runs |V|-1 iterations because any shortest path contains at most |V|-1 edges. If it has more, there is a loop somewhere, so either the cycle must have a nonpositive total weight. The algorithm detects this on the |V|th turn.</li>
+                </ul>
+                <h4 class="sub-head">2/27 Section 6 - Greedy Algorithms</h4>
+                <ul>
+                    <li>When solving HornSAT problems, the general HornSAT structure is important because solving general satisfiablity problems (that is, not in the format of HornSAT) is really hard.</li>
+                    <li>A Huffman tree of exactly n symbols has n-1 internal nodes.</li>
+                    <li>A Huffman code is the most compact prefix-free code representing a string given the frequencies of its symbols.</li>
+                </ul>
+                <h4 class="sub-head">3/6 Section 7 - Dynamic Programming</h4>
+                <ul>
+                    <li>The final subproblem should contain the values that you need to return in the end. Thus subproblems should be of similar types to the return value.</li>
+                    <li>There are three major steps to solving a DP problem: defining the subproblem, building the recurrence relation, and specifying the order in which you solve the subproblems. The third step is necessary for iterative solution but can be avoided in recursive solutions given that you memoize.</li>
+                    <li>Subproblem indices should contain all necessary information to solve a given DP problem.</li>
+                    <li>Many DP problems have similar format to other DP problems. Like divide-and-conquer algorithms, it is a good idea to build a repository of DP problems through practice.</li>
+                    <li>Sometimes it's useful to define the value of subproblems on trivial or unnatural examples, such as C(-1) = 0 for the copper pipes problem on discussion, or P(empty set) = 0 for a set building problem.</li>
+                </ul>
+                <h4 class="sub-head">3/13 Section 8 - Linear Programming</h4>
+                <ul>
+                    <li>For Linear Programming, graphical intuition is a good place to start but algebraic intuition will get you further in solving exam problems.</li>
+                    <li>Reductions are a useful tool for solving problems that are similar to a given format, and it's worth understanding common methods, like slack variables.</li>
+                    <li>Like DP subproblems, LP variables should contain all necessary information to model the problem.</li>
+                    <li>There are 3 steps in solving an LP problem: defining the variables, defining the objective, and defining the constraints.</li>
+                    <li>Don't forget sensibility constraints, e.g. probability is between 0 and 1, times should be nonnegative, etc.</li>
+                </ul>
+                <h4 class="sub-head">3/20 Section 9 - LP Duality</h4>
+                <ul>
+                    <li>The dual is derived by trying to find the best upper bound on the primal. The dual variables correspond to primal coefficients.</li>
+                    <li>In linear programs, the optimal value of the dual d<sup>*</sup> is equal to the optimal value of the primal p<sup>*</sup>.</li>
+                    <li>The max flow is equal to the min cut. This is a good way to check your answers to both problems.</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
