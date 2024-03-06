@@ -32,8 +32,13 @@ a.sublink {
   color: #efefef; }
 
 a {
-  color: #eb7d00;
+  color: #bf5700;
   }
+
+a:hover {
+  color: #eb7d00;
+  text-decoration: none;
+}
 
 .droplink {
   color: #FF9500;
